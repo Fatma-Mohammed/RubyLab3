@@ -5,12 +5,12 @@ class ItemsController < ApplicationController
   def index
     @items = Item.all
 
-    render json: @items, each_serializer: Serializers::ItemSerializer
+    render json: @items
   end
 
   # GET /items/1
   def show
-    render json: @item, serializer: Serializers::ItemSerializer
+    render json: @item
   end
 
   # POST /items
